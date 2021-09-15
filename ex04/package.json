@@ -1,0 +1,20 @@
+{
+  "name": "webrtc_study",
+  "version": "1.0.0",
+  "description": "webrtc code sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webrtc",
+    "video",
+    "audio"
+  ],
+  "author": "gbox3d",
+  "license": "ISC",
+  "dependencies": {
+    "node-static": "^0.7.11",
+    "socket.io": "^3.1.0"
+  }
+}
