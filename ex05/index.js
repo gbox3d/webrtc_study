@@ -7,9 +7,11 @@ var socketIO = require('socket.io');
 const fs = require('fs')
 
 var fileServer = new (nodeStatic.Server)();
+
 const options = {
-  key: fs.readFileSync('../../cert/privkey.pem'),
-  cert: fs.readFileSync('../../cert/cert.pem')
+  key: fs.readFileSync('/home/ubiqos/work/project/cert_files/2022_2/private.key'),
+  cert: fs.readFileSync('/home/ubiqos/work/project/cert_files/2022_2/certificate.crt'),
+  ca: fs.readFileSync('/home/ubiqos/work/project/cert_files/2022_2/ca_bundle.crt'),
 };
 
 
@@ -19,7 +21,7 @@ var app = http.createServer(options,function (req, res) {
   fileServer.serve(req, res);
 }).listen(8000);
 
-var io = socketIO.listen(app);
+var io = socketIO(app);
 io.sockets.on('connection', function (socket) {
 
   // convenience function to log server messages on the client

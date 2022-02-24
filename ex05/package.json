@@ -4,7 +4,8 @@
   "description": "webrtc code sample",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
   },
   "keywords": [
     "webrtc",
@@ -15,6 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "node-static": "^0.7.11",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.0.4"
   }
 }
